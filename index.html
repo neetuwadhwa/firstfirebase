@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Enter Days" type="text" id="txtdays"> =<span>Total Days</span>
+    <br><br>
+    <button onclick="pin()">Click</button>
+            <h1 id="type"></h1>
+
+ <script>
+        function pin()
+        {
+          day= parseInt(document.getElementById("txtdays").value)
+
+          if(day=="")
+           return
+           if(day<=5)
+           {
+            fine= day*.5;
+            document.getElementById("type").innerHTML=fine
+           }
+           else if(day<=10)
+           {
+             day=day-5;
+             fine=(day*1)+2.5
+             document.getElementById("type").innerHTML=fine
+           }
+           else if(day<=15)
+           {
+            day=day-10;
+            fine= (day*5)+7.5
+            document.getElementById("type").innerHTML=fine
+           }
+
+        }
+ </script>
+
+</body>
+</html>
